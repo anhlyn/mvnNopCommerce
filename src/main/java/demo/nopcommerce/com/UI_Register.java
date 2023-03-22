@@ -13,4 +13,8 @@ public class UI_Register {
     public static String TXT_PASS = "//input[@id='Password']";
     public static String TXT_PASSCONFIRM = "//input[@id='ConfirmPassword']";
 
+    public static String RESULT_MSG = "//div[@class='page-body']/div[@class='result']";
+
+    public static String VALIDATION_SUM_ERROR = "//div[@class='page-body']//div[contains(@class,'validation-summary-errors')]/ul/li";
+
 }
