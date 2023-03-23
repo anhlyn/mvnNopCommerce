@@ -19,6 +19,13 @@ public class TestSuit_Register {
     Faker faker = new Faker();
     Hashtable<String, String> account = new Hashtable<>();
 
+    public TestSuit_Register(){
+    }
+
+    public TestSuit_Register(Helper h){
+        helperObj = h;
+    }
+
     @BeforeMethod
     public void openBrowser(){
         helperObj.openBrowser();
@@ -35,7 +42,7 @@ public class TestSuit_Register {
         browserObj.quit();
     }
 
-    void loadRegisterPage(){
+    public void loadRegisterPage(){
         //load Homepage
         Assert.assertTrue(helperObj.loadHomepage());
         //load Register page
