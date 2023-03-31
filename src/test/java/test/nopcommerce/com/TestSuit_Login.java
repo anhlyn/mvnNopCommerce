@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.util.Hashtable;
@@ -46,7 +47,7 @@ public class TestSuit_Login extends BaseTest {
         Assert.assertTrue(msgSummaryErr.contains("No customer account found"));
     }
 
-    @Test
+    @Test(enabled = false)
     public void RegisterNewAcc(){
         loadNavByText("register", "register");
 
@@ -68,19 +69,21 @@ public class TestSuit_Login extends BaseTest {
         Assert.assertEquals(resultMsg, "Your registration completed");
     }
 
-    @Test(dependsOnMethods = "RegisterNewAcc")
-    public void TC04_LoginWithExistedEmail_EmptyPass(){
+    @Test
+    @Parameters({"email"})
+    public void TC04_LoginWithExistedEmail_EmptyPass(String mail){
         loadNavByText("Login", "Welcome, Please Sign In!");
 
-        type(UI_Login.TXT_EMAIL, account.get("email"));
+        type(UI_Login.TXT_EMAIL, mail);
         click(UI_Login.BTN_LOGIN);
     }
 
-    @Test(dependsOnMethods = "RegisterNewAcc")
-    public void TC05_LoginWithExistedEmail_WrongPass(){
+    @Test
+    @Parameters({"email"})
+    public void TC05_LoginWithExistedEmail_WrongPass(String mail){
         loadNavByText("Login", "Welcome, Please Sign In!");
 
-        type(UI_Login.TXT_EMAIL, account.get("email"));
+        type(UI_Login.TXT_EMAIL, mail);
         type(UI_Login.TXT_PASS, faker.internet().password(6,8));
         click(UI_Login.BTN_LOGIN);
 
@@ -89,12 +92,13 @@ public class TestSuit_Login extends BaseTest {
         Assert.assertTrue(msgSummaryErr.contains("The credentials provided are incorrect"));
     }
 
-    @Test(dependsOnMethods = "RegisterNewAcc")
-    public void TC06_LoginSuccessWithNewAcc(){
+    @Test
+    @Parameters({"email", "password"})
+    public void TC06_LoginSuccess(String mail, String p){
         loadNavByText("Login", "Welcome, Please Sign In!");
 
-        type(UI_Login.TXT_EMAIL, account.get("email"));
-        type(UI_Login.TXT_PASS, account.get("password"));
+        type(UI_Login.TXT_EMAIL, mail);
+        type(UI_Login.TXT_PASS, p);
         click(UI_Login.BTN_LOGIN);
 
         Assert.assertTrue(isDisplayed(UI_Common.HEADER_NAV_LOGOUT));

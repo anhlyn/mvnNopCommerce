@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="nopcommerce" verbose="1" >
+    <test name="frontend" >
+        <parameter name="email" value="hector.koelpin@gmail.com"></parameter>
+        <parameter name="password" value="iqemtg8"></parameter>
+        <parameter name="firstname" value="Keisha"></parameter>
+        <parameter name="lastname" value="Gottlieb"></parameter>
+        <classes>
+            <class name="test.nopcommerce.com.TestSuit_Register"></class>
+            <class name="test.nopcommerce.com.TestSuit_Login" />
+        </classes>
+    </test>
+</suite>
