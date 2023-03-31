@@ -15,7 +15,7 @@ public class BaseTest {
 
     protected WebDriver driver = null;
     protected Faker faker = new Faker();
-    protected Hashtable<String, String> account = new Hashtable<>();
+    protected Hashtable<String, String> account = new Hashtable<String, String>();
 
     @BeforeMethod
     public void loadHomePage(){
@@ -73,9 +73,6 @@ public class BaseTest {
                 break;
             case "login":
                 click(UI_Common.HEADER_NAV_LOGIN);
-                break;
-            case "wishlist":
-                click(UI_Common.HEADER_NAV_WISHLIST);
                 break;
             default:
                 click(UI_Common.HEADER_NAV_WISHLIST);

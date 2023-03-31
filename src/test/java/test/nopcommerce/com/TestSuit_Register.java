@@ -18,22 +18,17 @@ public class TestSuit_Register extends BaseTest {
     Faker faker = new Faker();
     Hashtable<String, String> account = new Hashtable<>();
 
-    //@Test
-    public void tc01(){
-
-    }
-
     @Test
     public void TC01_EmptyData(){
         loadNavByText("register", "register");
+
+        click(UI_Register.BTN_RIGISTER);
 
         Assert.assertEquals(getText(UI_Register.SPAN_FIRSTNAME_ERR), "First name is required.");
         Assert.assertEquals(getText(UI_Register.SPAN_LASTNAME_ERR), "Last name is required.");
         Assert.assertEquals(getText(UI_Register.SPAN_EMAIL_ERR), "Email is required.");
         Assert.assertEquals(getText(UI_Register.SPAN_PASS_ERR), "Password is required.");
         Assert.assertEquals(getText(UI_Register.SPAN_PASS_CONFIRM_ERR), "Password is required.");
-
-        click(UI_Register.BTN_RIGISTER);
     }
 
     @Test
@@ -43,10 +38,11 @@ public class TestSuit_Register extends BaseTest {
         String password = faker.internet().password(6,8);
         type(UI_Register.TXT_FIRSTNAME, faker.name().firstName());
         type(UI_Register.TXT_LASTNAME, faker.name().lastName());
-        type(UI_Register.TXT_EMAIL, faker.internet().emailAddress());
+        type(UI_Register.TXT_EMAIL, "test@");
         type(UI_Register.TXT_PASS, password);
         type(UI_Register.TXT_PASSCONFIRM, password);
         click(UI_Register.BTN_RIGISTER);
+
         Assert.assertEquals(getText(UI_Register.SPAN_EMAIL_ERR), "Wrong email");
     }
 
