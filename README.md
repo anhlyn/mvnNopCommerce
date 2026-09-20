@@ -2,12 +2,9 @@
 
 This project has Selenium + TestNG tests for a nopCommerce website (Login and Register pages).
 
-## Why we use a local website
+## Why I use a local website
 
-The public demo site (`demo.nopcommerce.com`) now blocks automated browsers with a
-"Just a moment..." Cloudflare check. A robot (like Selenium) cannot pass this check.
-
-So instead, we run our own copy of nopCommerce on our computer using Docker. The
+I run our own copy of nopCommerce on our computer using Docker. The
 tests point to this local copy at `http://localhost:8080/`.
 
 ## What you need installed
@@ -47,6 +44,9 @@ You can do this two ways:
    - Database name: `nopcommerce`
    - Username: `root`
    - Password: `nopCommerce_db_password`
+   - Tick **Create sample data** — this loads sample products, categories, etc.,
+     which are needed for the exploratory test cases in `TestPlan.md` (cart, search,
+     wishlist, and so on).
 3. Click **Install** and wait. The page will restart itself when done.
 
 After install, go to `http://localhost:8080/register` and create the test account
