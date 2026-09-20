@@ -7,7 +7,7 @@ public class UI_Register {
     public static final By SPAN_FIRSTNAME_ERR = By.id("FirstName-error");
     public static final By SPAN_LASTNAME_ERR = By.id("LastName-error");
     public static final By SPAN_EMAIL_ERR = By.id("Email-error");
-    public static final By SPAN_PASS_ERR = By.id("Password-error");
+    public static final By SPAN_PASS_ERR = By.cssSelector("span[data-valmsg-for='Password']");
     public static final By SPAN_PASS_CONFIRM_ERR = By.id("ConfirmPassword-error");
     public static final By TXT_FIRSTNAME = By.id("FirstName");
     public static final By TXT_LASTNAME = By.id("LastName");

@@ -49,7 +49,7 @@ public class TestSuit_Register extends BaseTest {
         String password = faker.internet().password(6,8);
         typeAndClickRegister(faker.name().firstName(), faker.name().lastName(), "test@", password, password);
 
-        Assert.assertEquals(getText(UI_Register.SPAN_EMAIL_ERR), "Wrong email");
+        Assert.assertEquals(getText(UI_Register.SPAN_EMAIL_ERR), "Please enter a valid email address.");
     }
 
     @Test(enabled = false)

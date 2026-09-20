@@ -5,7 +5,6 @@ import main.nopcommerce.com.BaseTest;
 import main.nopcommerce.com.UI_Common;
 import main.nopcommerce.com.UI_Login;
 import main.nopcommerce.com.UI_Register;
-import org.jsoup.Connection;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -31,7 +30,7 @@ public class TestSuit_Login extends BaseTest {
 
         type(UI_Login.TXT_EMAIL, "test");
         click(UI_Login.BTN_LOGIN);
-        Assert.assertEquals(getText(UI_Login.SPAN_EMAIL_ERR), "Wrong email");
+        Assert.assertEquals(getText(UI_Login.SPAN_EMAIL_ERR), "Please enter a valid email address.");
     }
 
     @Test

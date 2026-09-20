@@ -1,7 +1,6 @@
 package main.nopcommerce.com;
 
 import com.github.javafaker.Faker;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,7 +18,6 @@ public class BaseTest {
 
     @BeforeMethod
     public void loadHomePage(){
-        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.get(Config.URL);
     }

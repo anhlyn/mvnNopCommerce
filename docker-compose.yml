@@ -1,0 +1,19 @@
+services:
+  nopcommerce_web:
+    image: nopcommerceteam/nopcommerce:latest
+    container_name: nopcommerce_local
+    ports:
+      - "8080:80"
+    depends_on:
+      - nopcommerce_database
+    restart: unless-stopped
+
+  nopcommerce_database:
+    image: mysql:8.0
+    container_name: nopcommerce_mysql_local
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: "nopCommerce_db_password"
+      MYSQL_DATABASE: "nopcommerce"
+    ports:
+      - "3307:3306"
