@@ -7,8 +7,8 @@
         <parameter name="firstname" value="Keisha"></parameter>
         <parameter name="lastname" value="Gottlieb"></parameter>
         <classes>
-            <class name="test.nopcommerce.com.TestSuit_Register"></class>
-            <class name="test.nopcommerce.com.TestSuit_Login" />
+            <class name="test.nopcommerce.com.TestSuite_Register"></class>
+            <class name="test.nopcommerce.com.TestSuite_Login" />
         </classes>
     </test>
 </suite>
