@@ -268,11 +268,11 @@ Found through exploratory testing. Not automated yet.
 
 ## 8. Contact Us
 
-Found through exploratory testing. Not automated yet.
+Found through exploratory testing.
 
 ### TC01 — Submit the Contact Us form with everything empty
 - **Priority:** Low
-- **Automated Status:** Not Automated
+- **Automated Status:** Automated
 - **Steps:**
   1. Go to the "Contact us" page.
   2. Leave Name, Email, and Enquiry blank.
@@ -283,11 +283,11 @@ Found through exploratory testing. Not automated yet.
 
 ## 9. Newsletter
 
-Found through exploratory testing. Not automated yet.
+Found through exploratory testing.
 
 ### TC01 — Subscribe to the newsletter from the footer
 - **Priority:** Low
-- **Automated Status:** Not Automated
+- **Automated Status:** Automated
 - **Steps:**
   1. Scroll to the footer on any page.
   2. Type a valid email address into the "Newsletter" box.
@@ -337,6 +337,6 @@ Found through exploratory testing. Not automated yet.
 | 20 | Compare Products | TC01 | Add product to Compare list | Low | Not Automated |
 | 21 | Password Recovery | TC01 | Password recovery, registered email | High | Not Automated |
 | 22 | Password Recovery | TC02 | Password recovery, unregistered email | Medium | Not Automated |
-| 23 | Contact Us | TC01 | Contact Us form, empty submit | Low | Not Automated |
-| 24 | Newsletter | TC01 | Newsletter subscribe, valid email | Low | Not Automated |
+| 23 | Contact Us | TC01 | Contact Us form, empty submit | Low | Automated |
+| 24 | Newsletter | TC01 | Newsletter subscribe, valid email | Low | Automated |
 | 25 | Search | TC01 | Search with no matching results | Medium | Not Automated |

@@ -1,11 +1,8 @@
 package test.nopcommerce.com;
 
-import com.sun.tools.jconsole.JConsoleContext;
 import main.nopcommerce.com.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.*;
-import pom.Common;
-import pom.LoginPage;
 
 public class TestSuite_Login extends BaseTest {
 

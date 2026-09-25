@@ -14,6 +14,9 @@ public class Common extends BasePage {
     @FindBy(xpath = "//div[@class='header-links']//a[@class='ico-logout']")
     WebElement headerLinkLogout;
 
+    @FindBy(xpath = "//a[@href='/contactus' and contains(@class,'footer-menu__link')]")
+    WebElement footerLinkContactUs;
+
     @FindBy(xpath = "//div[@class='page-title']/h1")
     WebElement headingTitle;
 
@@ -33,16 +36,7 @@ public class Common extends BasePage {
         customClick(this.headerLinkRegister);
     }
 
-    public boolean navigateByText(String text, String expectedText){
-        String navLowerStr = text.toLowerCase();
-        switch (navLowerStr){
-            case "register":
-                this.headerLinkRegister.click();
-                break;
-            default:
-                this.headerLinkLogin.click();
-        }
-        return this.headingTitle.getText().toLowerCase().equals(expectedText.toLowerCase());
+    public void goToContactUs(){
+        customClick(this.footerLinkContactUs);
     }
-
 }

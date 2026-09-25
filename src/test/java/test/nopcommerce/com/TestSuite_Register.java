@@ -3,8 +3,6 @@ package test.nopcommerce.com;
 import main.nopcommerce.com.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.*;
-import pom.Common;
-import pom.RegisterPage;
 
 public class TestSuite_Register extends BaseTest {
     @Test
