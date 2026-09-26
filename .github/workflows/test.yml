@@ -36,7 +36,9 @@ jobs:
             curl -sf -o /dev/null http://localhost:8080/ && exit 0
             sleep 5
           done
-          docker compose -f docker-compose.ci.yml logs
+          docker compose -f docker-compose.ci.yml ps -a
+          docker compose -f docker-compose.ci.yml logs nopcommerce_web
+          docker compose -f docker-compose.ci.yml logs --tail=50 nopcommerce_database
           exit 1
 
       - name: Run tests

@@ -5,7 +5,16 @@ services:
     ports:
       - "8080:80"
     depends_on:
-      - nopcommerce_database
+      nopcommerce_database:
+        condition: service_healthy
+    restart: unless-stopped
 
   nopcommerce_database:
     image: ghcr.io/anhlyn/nop-db:1
+    restart: unless-stopped
+    healthcheck:
+      # TCP (-h 127.0.0.1): the temporary init server is socket-only, so this only passes once the dump is imported.
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-pnopCommerce_db_password"]
+      interval: 5s
+      timeout: 5s
+      retries: 60
