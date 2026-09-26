@@ -1,8 +1,10 @@
 package main.nopcommerce.com;
 
 import com.github.javafaker.Faker;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -27,8 +29,13 @@ public class BaseTest {
 
     @BeforeMethod
     public void loadHomePage(){
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless=new");
+        driver = new ChromeDriver(options);
+        driver.manage().window().setSize(new Dimension(1200, 1366));
+
         driver.get(Config.URL);
+        System.out.println("window size: " + driver.manage().window().getSize());
         cm = new Common(this.driver);
         loginPage = new LoginPage(this.driver);
         registerPage = new RegisterPage(this.driver);

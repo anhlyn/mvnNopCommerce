@@ -30,7 +30,6 @@ public class TestSuite_Login extends BaseTest {
         Assert.assertTrue(loginPage.getSummaryError().contains("Login was unsuccessful."));
     }
 
-    //need to investigate flaky test
     @Test
     @Parameters({"email"})
     public void TC04_LoginWithExistedEmail_EmptyPass(String mail){

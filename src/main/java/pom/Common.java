@@ -14,7 +14,7 @@ public class Common extends BasePage {
     @FindBy(xpath = "//div[@class='header-links']//a[@class='ico-logout']")
     WebElement headerLinkLogout;
 
-    @FindBy(xpath = "//a[@href='/contactus' and contains(@class,'footer-menu__link')]")
+    @FindBy(xpath = "//a[@href='/contactus']")
     WebElement footerLinkContactUs;
 
     @FindBy(xpath = "//div[@class='page-title']/h1")
