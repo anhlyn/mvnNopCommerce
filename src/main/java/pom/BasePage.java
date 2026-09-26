@@ -36,4 +36,11 @@ public class BasePage {
                 .scrollToElement(ele).perform();
         ele.click();
     }
+
+    protected String customGetText(WebElement ele){
+        ele = this.driverWait.until(
+                ExpectedConditions.visibilityOf(ele)
+        );
+        return ele.getText();
+    }
 }

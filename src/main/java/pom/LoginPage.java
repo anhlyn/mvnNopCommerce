@@ -42,6 +42,7 @@ public class LoginPage extends BasePage {
     }
 
     public String getSummaryError(){
-        return this.summaryError.getText();
+        //return this.summaryError.getText();
+        return customGetText(this.summaryError);
     }
 }
