@@ -17,6 +17,9 @@ public class Common extends BasePage {
     @FindBy(xpath = "//a[@href='/contactus']")
     WebElement footerLinkContactUs;
 
+    @FindBy(xpath = "//a[@href='/search']")
+    WebElement footerLinkSearch;
+
     @FindBy(xpath = "//div[@class='page-title']/h1")
     WebElement headingTitle;
 
@@ -38,5 +41,9 @@ public class Common extends BasePage {
 
     public void goToContactUs(){
         customClick(this.footerLinkContactUs);
+    }
+
+    public void goToSearch(){
+        customClick(this.footerLinkSearch);
     }
 }

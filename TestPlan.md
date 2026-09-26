@@ -302,7 +302,7 @@ Found through exploratory testing. Not automated yet.
 
 ### TC01 — Search for something that does not exist
 - **Priority:** Medium
-- **Automated Status:** Not Automated
+- **Automated Status:** Automated
 - **Steps:**
   1. Go to the Search page.
   2. Type in a made-up word that no product matches (example: `zzzznoresultzzzz`).
@@ -339,4 +339,4 @@ Found through exploratory testing. Not automated yet.
 | 22 | Password Recovery | TC02 | Password recovery, unregistered email | Medium | Not Automated |
 | 23 | Contact Us | TC01 | Contact Us form, empty submit | Low | Automated |
 | 24 | Newsletter | TC01 | Newsletter subscribe, valid email | Low | Automated |
-| 25 | Search | TC01 | Search with no matching results | Medium | Not Automated |
+| 25 | Search | TC01 | Search with no matching results | Medium | Automated |

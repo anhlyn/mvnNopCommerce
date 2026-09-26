@@ -11,6 +11,7 @@
             <class name="test.nopcommerce.com.TestSuite_Login" />
             <class name="test.nopcommerce.com.TestSuite_ContactUs" />
             <class name="test.nopcommerce.com.TestSuite_Newsletter" />
+            <class name="test.nopcommerce.com.TestSuite_Search" />
         </classes>
     </test>
 </suite>
