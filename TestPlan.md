@@ -75,16 +75,6 @@ Priority legend:
   3. Click **Log in**.
 - **Expected result:** The **Log out** link appears in the header, showing the user is logged in.
 
-### (Extra) RegisterNewAcc — Register a brand-new random account
-- **Priority:** Low
-- **Automated Status:** Automated (Disabled)
-- **Steps:**
-  1. Go to the Register page.
-  2. Fill in a randomly generated first name, last name, email, and password.
-  3. Click **Register**.
-- **Expected result:** The page shows "Your registration completed".
-- **Note:** This is not really a Login test — it lives in the Login test file, used to create a new test account when needed.
-
 ---
 
 ## 2. Register
@@ -116,7 +106,7 @@ Priority legend:
 
 ### TC03 — Register a new account with valid data
 - **Priority:** High
-- **Automated Status:** Automated (Disabled)
+- **Automated Status:** Automated
 - **Steps:**
   1. Go to the Register page.
   2. Fill in a randomly generated first name, last name, email, and password.
@@ -321,22 +311,21 @@ Found through exploratory testing. Not automated yet.
 | 4 | Login | TC04 | Login with existing email, empty password | Medium | Automated |
 | 5 | Login | TC05 | Login with existing email, wrong password | High | Automated |
 | 6 | Login | TC06 | Login success | High | Automated |
-| 7 | Login | RegisterNewAcc | Register random new account (helper, lives in Login suite) | Low | Automated (Disabled) |
-| 8 | Register | TC01 | Register with empty data | Medium | Automated |
-| 9 | Register | TC02 | Register with invalid email format | Medium | Automated |
-| 10 | Register | TC03 | Register with valid data | High | Automated (Disabled) |
-| 11 | Register | TC04 | Register with existing email | High | Automated |
-| 12 | Register | TC05 | Register with password < 6 characters | Medium | Automated |
-| 13 | Register | TC06 | Register with password/confirm mismatch | Medium | Automated |
-| 14 | Shopping Cart | TC01 | Add simple product to cart | High | Not Automated |
-| 15 | Shopping Cart | TC02 | Add configurable product without required option | High | Not Automated |
-| 16 | Shopping Cart | TC03 | Apply invalid discount coupon | Medium | Not Automated |
-| 17 | Checkout | TC01 | Checkout blocked without accepting Terms of Service | High | Not Automated |
-| 18 | Checkout | TC02 | Guest user checkout flow | High | Not Automated |
-| 19 | Wishlist | TC01 | Add product to Wishlist | Medium | Not Automated |
-| 20 | Compare Products | TC01 | Add product to Compare list | Low | Not Automated |
-| 21 | Password Recovery | TC01 | Password recovery, registered email | High | Not Automated |
-| 22 | Password Recovery | TC02 | Password recovery, unregistered email | Medium | Not Automated |
-| 23 | Contact Us | TC01 | Contact Us form, empty submit | Low | Automated |
-| 24 | Newsletter | TC01 | Newsletter subscribe, valid email | Low | Automated |
-| 25 | Search | TC01 | Search with no matching results | Medium | Automated |
+| 7 | Register | TC01 | Register with empty data | Medium | Automated |
+| 8 | Register | TC02 | Register with invalid email format | Medium | Automated |
+| 9 | Register | TC03 | Register with valid data | High | Automated |
+| 10 | Register | TC04 | Register with existing email | High | Automated |
+| 11 | Register | TC05 | Register with password < 6 characters | Medium | Automated |
+| 12 | Register | TC06 | Register with password/confirm mismatch | Medium | Automated |
+| 13 | Shopping Cart | TC01 | Add simple product to cart | High | Not Automated |
+| 14 | Shopping Cart | TC02 | Add configurable product without required option | High | Not Automated |
+| 15 | Shopping Cart | TC03 | Apply invalid discount coupon | Medium | Not Automated |
+| 16 | Checkout | TC01 | Checkout blocked without accepting Terms of Service | High | Not Automated |
+| 17 | Checkout | TC02 | Guest user checkout flow | High | Not Automated |
+| 18 | Wishlist | TC01 | Add product to Wishlist | Medium | Not Automated |
+| 19 | Compare Products | TC01 | Add product to Compare list | Low | Not Automated |
+| 20 | Password Recovery | TC01 | Password recovery, registered email | High | Not Automated |
+| 21 | Password Recovery | TC02 | Password recovery, unregistered email | Medium | Not Automated |
+| 22 | Contact Us | TC01 | Contact Us form, empty submit | Low | Automated |
+| 23 | Newsletter | TC01 | Newsletter subscribe, valid email | Low | Automated |
+| 24 | Search | TC01 | Search with no matching results | Medium | Automated |

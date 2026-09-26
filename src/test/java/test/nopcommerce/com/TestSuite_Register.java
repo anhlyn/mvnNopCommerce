@@ -24,7 +24,7 @@ public class TestSuite_Register extends BaseTest {
         Assert.assertTrue(registerPage.getErrEmail().contains("Please enter a valid email address."));
     }
 
-    @Test(enabled = false)
+    @Test
     public void TC03_ValidAccount(){
         //preparing test data
         account.put("firstname", faker.name().firstName());
@@ -35,11 +35,8 @@ public class TestSuite_Register extends BaseTest {
         registerPage.fillForm(account.get("firstname"), account.get("lastname"), account.get("email"), account.get("password"), account.get("password"));
         registerPage.clickRegister();
         Assert.assertTrue(registerPage.getResultMsg().contains("Your registration completed"));
-        System.out.println("-- ACCOUNT -- ");
-        System.out.println(account);
     }
 
-    //flaky test here
     @Test
     @Parameters({"email", "password", "firstname", "lastname"})
     public void TC04_ExistedEmail(@Optional("hector.koelpin@gmail.com") String mail, @Optional("iqemtg8") String p, @Optional("Keisha") String fn, @Optional("Gottlieb") String ln){
