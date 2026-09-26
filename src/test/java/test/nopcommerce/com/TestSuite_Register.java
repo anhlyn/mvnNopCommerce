@@ -39,7 +39,7 @@ public class TestSuite_Register extends BaseTest {
 
     @Test
     @Parameters({"email", "password", "firstname", "lastname"})
-    public void TC04_ExistedEmail(@Optional("hector.koelpin@gmail.com") String mail, @Optional("iqemtg8") String p, @Optional("Keisha") String fn, @Optional("Gottlieb") String ln){
+    public void TC04_ExistedEmail(@Optional("linh.test@gmail.com") String mail, @Optional("12345678") String p, @Optional("Linh") String fn, @Optional("Tran") String ln){
         cm.goToRegister();
         registerPage.fillForm(fn, ln, mail, p, p);
         registerPage.clickRegister();

@@ -51,7 +51,7 @@ You can do this two ways:
 
 After install, go to `http://localhost:8080/register` and create the test account
 used by the automated tests (see `testsuite_nopcommerce.xml` for the email/password
-values it expects — `hector.koelpin@gmail.com` / `iqemtg8` / Keisha Gottlieb by default).
+values it expects — `linh.test@gmail.com` / `12345678` / Linh Tran by default).
 
 You only need to do this once. As long as you don't delete the Docker volumes
 (`docker compose down -v`), your data stays.

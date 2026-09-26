@@ -36,7 +36,7 @@ TestPlan.md                                        # source of truth for TC desc
    ```java
    @Test
    @Parameters({"email"})
-   public void TC07_Example(@Optional("hector.koelpin@gmail.com") String mail){
+   public void TC07_Example(@Optional("linh.test@gmail.com") String mail){
        cm.goToLogin();
        loginPage.fillEmail(mail);
        loginPage.clickLogin();

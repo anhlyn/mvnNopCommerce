@@ -2,10 +2,10 @@
 
 <suite name="nopcommerce" verbose="1" >
     <test name="frontend" >
-        <parameter name="email" value="hector.koelpin@gmail.com" />
-        <parameter name="password" value="iqemtg8" />
-        <parameter name="firstname" value="Keisha" />
-        <parameter name="lastname" value="Gottlieb" />
+        <parameter name="email" value="linh.test@gmail.com" />
+        <parameter name="password" value="12345678" />
+        <parameter name="firstname" value="Linh" />
+        <parameter name="lastname" value="Tran" />
         <classes>
             <class name="test.nopcommerce.com.TestSuite_Register" />
             <class name="test.nopcommerce.com.TestSuite_Login" />

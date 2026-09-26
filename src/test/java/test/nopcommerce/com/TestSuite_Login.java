@@ -42,7 +42,7 @@ public class TestSuite_Login extends BaseTest {
 
     @Test
     @Parameters({"email"})
-    public void TC05_LoginWithExistedEmail_WrongPass(@Optional("hector.koelpin@gmail.com") String mail){
+    public void TC05_LoginWithExistedEmail_WrongPass(@Optional("linh.test@gmail.com") String mail){
         cm.goToLogin();
         loginPage.fillEmail(mail);
         loginPage.fillPass(faker.internet().password(6,8));
@@ -52,7 +52,7 @@ public class TestSuite_Login extends BaseTest {
 
     @Test
     @Parameters({"email", "password"})
-    public void TC06_LoginSuccess(@Optional("hector.koelpin@gmail.com") String mail,@Optional("iqemtg8") String p){
+    public void TC06_LoginSuccess(@Optional("linh.test@gmail.com") String mail,@Optional("12345678") String p){
         cm.goToLogin();
         loginPage.fillEmail(mail);
         loginPage.fillPass(p);
