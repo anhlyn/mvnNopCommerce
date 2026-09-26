@@ -1,0 +1,11 @@
+# Pre-installed nopCommerce (install wizard done, test account seeded). Built from docker/.
+services:
+  nopcommerce_web:
+    image: ghcr.io/anhlyn/nop-web:1
+    ports:
+      - "8080:80"
+    depends_on:
+      - nopcommerce_database
+
+  nopcommerce_database:
+    image: ghcr.io/anhlyn/nop-db:1

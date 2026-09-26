@@ -1,0 +1,33 @@
+name: Publish nopCommerce images
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Image tag (must match docker-compose.ci.yml)
+        default: "1"
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: docker/build-push-action@v6
+        with:
+          context: docker/db
+          push: true
+          tags: ghcr.io/${{ github.repository_owner }}/nop-db:${{ inputs.tag }}
+      - uses: docker/build-push-action@v6
+        with:
+          context: docker/web
+          push: true
+          tags: ghcr.io/${{ github.repository_owner }}/nop-web:${{ inputs.tag }}
